@@ -1,0 +1,17 @@
+{
+  "name": "VIVEK AI Personal Assistant",
+  "short_name": "VIVEK AI",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d0d11",
+  "theme_color": "#101014",
+  "description": "Personal study and creative assistant",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

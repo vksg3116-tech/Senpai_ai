@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101014">
+<meta name="description" content="VIVEK AI personal study and creativity assistant">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>VIVEK AI</title>
+<style>
+:root{--bg:#0d0d11;--panel:#17171e;--panel2:#202029;--gold:#d7ad58;--text:#f5f2eb;--muted:#a5a1a0;--line:#303039}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -15%,#3a2b13 0,#15141a 33%,var(--bg) 70%);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+header{position:sticky;top:0;z-index:5;background:#101014eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#f2d58d,#a87625);display:grid;place-items:center;color:#17120a;font-weight:900;font-size:19px;box-shadow:0 0 24px #d7ad5833}
+.brand{font-weight:850;letter-spacing:1.5px}.sub{font-size:11px;color:var(--muted);letter-spacing:1px}.status{margin-left:auto;font-size:11px;color:#d7ad58;border:1px solid #735b2e;padding:6px 9px;border-radius:30px}
+main{max-width:780px;margin:auto;padding:18px 14px 160px}.hero{text-align:center;padding:20px 8px 18px}.orb{width:76px;height:76px;border-radius:50%;margin:0 auto 13px;background:radial-gradient(circle at 35% 30%,#fff0c5,#d7ad58 35%,#704815 70%,#20180d);box-shadow:0 0 35px #d7ad5844}.hero h1{font-size:26px;margin:0 0 5px}.hero p{color:var(--muted);margin:0;font-size:13px}
+.notice{background:#211c12;border:1px solid #66502b;color:#e8d6ad;padding:11px 13px;border-radius:13px;font-size:12px;line-height:1.5;margin:12px 0 17px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tile{background:linear-gradient(145deg,#222129,#17171d);border:1px solid var(--line);border-radius:15px;padding:13px;text-align:left;color:var(--text);min-height:83px}.tile b{display:block;margin-bottom:4px}.tile span{font-size:12px;color:var(--muted)}
+.chat{display:flex;flex-direction:column;gap:12px;margin-top:18px}.msg{max-width:90%;padding:12px 14px;border-radius:16px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}.bot{align-self:flex-start;background:var(--panel2);border:1px solid var(--line);border-top-left-radius:5px}.user{align-self:flex-end;background:#49391d;border:1px solid #80622f;border-top-right-radius:5px}.small{font-size:11px;color:var(--muted);margin-top:5px}
+.composer{position:fixed;bottom:0;left:0;right:0;background:#101014f2;backdrop-filter:blur(15px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:6}.compose-inner{max-width:780px;margin:auto;display:flex;gap:8px;align-items:flex-end}.inputwrap{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:9px 12px}.inputwrap textarea{width:100%;resize:none;max-height:110px;border:0;outline:0;background:transparent;color:var(--text);font:inherit}.actions{display:flex;gap:7px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:13px;padding:11px 13px;font-weight:650}.send{background:linear-gradient(145deg,#e8c779,#b98532);color:#1a1408;border:0}.btn:disabled{opacity:.45}.tools{max-width:780px;margin:7px auto 0;display:flex;gap:7px;justify-content:space-between}.tools button{background:none;border:0;color:var(--muted);font-size:11px;padding:4px}
+footer{text-align:center;color:#777;font-size:11px;padding:25px 0}
+@media(min-width:650px){main{padding-top:28px}.grid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="logo">V</div><div><div class="brand">VIVEK AI</div><div class="sub">PERSONAL STUDY & CREATIVE ASSISTANT</div></div><div class="status">DEMO MODE</div></header>
+<main>
+<section class="hero"><div class="orb"></div><h1>What are we working on?</h1><p>Your study goals. Your creative work. One place.</p></section>
+<div class="notice"><b>Starter version:</b> Voice input, spoken replies, and chat history are included. This version uses built-in demo responses; it is not connected to a live AI model yet. A secure AI connection can be added later without putting a private API key in the app.</div>
+<section class="grid" aria-label="Assistant modes">
+<button class="tile" data-prompt="Make today's NEB study plan for my Class 11 Science with Computer Science subjects."><b>📚 NEB Study</b><span>Physics, Chemistry, Math, Computer</span></button>
+<button class="tile" data-prompt="Give me today's 30-minute SAT lesson. My target is 1550 and my English level is beginner."><b>🎯 SAT Coach</b><span>Build toward 1550</span></button>
+<button class="tile" data-prompt="Give me today's 30-minute IELTS lesson. My target is band 7.5 and my English level is beginner."><b>🌍 IELTS Coach</b><span>Build toward 7.5</span></button>
+<button class="tile" data-prompt="Teach me a practical Premiere Pro or After Effects editing skill for today."><b>🎬 Editing Mentor</b><span>Premiere Pro, After Effects</span></button>
+<button class="tile" data-prompt="Teach me a beginner-friendly coding concept with a small example."><b>💻 Coding</b><span>Web, Java, PHP, Git</span></button>
+<button class="tile" data-prompt="Help me research fully funded European Bachelor's options in Robotics or Mechatronics."><b>🤖 Career Planner</b><span>Robotics, scholarships</span></button>
+</section>
+<section id="chat" class="chat" aria-live="polite">
+<div class="msg bot">Hi! I'm VIVEK AI, your personal assistant prototype.\n\nChoose a mode above or type a message below. You can also tap the microphone to speak.</div>
+</section>
+<footer>Chat history stays in this browser on this device. Export a backup regularly.</footer>
+</main>
+<div class="composer"><div class="compose-inner">
+<div class="inputwrap"><textarea id="prompt" rows="1" placeholder="Ask VIVEK AI anything..."></textarea></div>
+<div class="actions"><button class="btn" id="mic" aria-label="Voice input">🎙️</button><button class="btn send" id="send">➤</button></div>
+</div><div class="tools"><button id="speakToggle">🔊 Voice replies: ON</button><button id="export">Export chat</button><button id="clear">Clear chat</button></div></div>
+<script>
+const chat=document.getElementById('chat'), input=document.getElementById('prompt');
+let voiceOn=true;
+const saved=JSON.parse(localStorage.getItem('vivek_ai_chat')||'[]');
+function add(role,text,save=true){const d=document.createElement('div');d.className='msg '+(role==='user'?'user':'bot');d.textContent=text;chat.appendChild(d);chat.scrollIntoView({behavior:'smooth',block:'end'});if(save){saved.push({role,text,at:new Date().toISOString()});localStorage.setItem('vivek_ai_chat',JSON.stringify(saved));}}
+saved.forEach(m=>add(m.role,m.text,false));
+function replyFor(q){
+ const s=q.toLowerCase();
+ if(s.includes('sat'))return "SAT COACH (demo):\nToday's 30-minute session:\n1. 10 min: learn one grammar or algebra concept.\n2. 15 min: solve 5 practice questions.\n3. 5 min: write down mistakes.\n\nFor official free practice, use Khan Academy: khanacademy.org/sat. This demo cannot score official SAT questions yet.";
+ if(s.includes('ielts'))return "IELTS COACH (demo):\nToday's 30-minute session:\n1. 10 min: learn 5 useful words in context.\n2. 10 min: listen to a short English clip and note key ideas.\n3. 10 min: speak or write a short answer.\n\nAim for clear, accurate English first; build toward band 7.5 gradually.";
+ if(s.includes('physics')||s.includes('chemistry')||s.includes('math')||s.includes('neb')||s.includes('class 11'))return "NEB STUDY (demo):\nTell me the exact chapter and question. I can help structure a beginner-friendly explanation, examples, formulas, numericals and English exam notes. For exact NEB alignment, compare with your current CDC syllabus and textbook.";
+ if(s.includes('edit')||s.includes('premiere')||s.includes('after effects'))return "EDITING MENTOR (demo):\nToday's practice: choose a 10-second clip, make a clean cut sequence, add keyframed scale movement, balance exposure, and export a draft. Keep the original project so you can compare improvements.";
+ if(s.includes('code')||s.includes('html')||s.includes('java')||s.includes('javascript'))return "CODING (demo):\nTell me your language and goal. A good practice cycle is: understand one concept, type a small example yourself, change one part, then explain what changed.";
+ if(s.includes('robot')||s.includes('scholarship')||s.includes('europe'))return "CAREER PLANNER (demo):\nYour long-term direction is a fully funded English-taught Bachelor's in Robotics, Mechatronics or Automation in Europe. Scholarship eligibility and full living-cost coverage must be checked on official university and government pages; never assume tuition-only funding is enough.";
+ return "I'm running in starter/demo mode, so I don't have a live AI model connected yet. I can still help you organize your goals and use the built-in study modes. A secure AI backend is the next development step.";
+}
+function send(){const q=input.value.trim();if(!q)return;add('user',q);input.value='';input.style.height='auto';const a=replyFor(q);add('bot',a);if(voiceOn&&'speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(a);u.lang='en-US';speechSynthesis.speak(u);}}
+document.getElementById('send').onclick=send;
+input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}});
+input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,110)+'px';});
+document.querySelectorAll('[data-prompt]').forEach(b=>b.onclick=()=>{input.value=b.dataset.prompt;send();});
+document.getElementById('speakToggle').onclick=()=>{voiceOn=!voiceOn;document.getElementById('speakToggle').textContent='🔊 Voice replies: '+(voiceOn?'ON':'OFF');if(!voiceOn&&'speechSynthesis'in window)speechSynthesis.cancel();};
+const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+const mic=document.getElementById('mic');
+if(SpeechRecognition){const rec=new SpeechRecognition();rec.lang='en-US';rec.interimResults=false;rec.onresult=e=>{input.value=e.results[0][0].transcript;};rec.onerror=()=>{mic.textContent='🎙️';};rec.onend=()=>{mic.textContent='🎙️';};mic.onclick=()=>{mic.textContent='⏺️';rec.start();};}
+else{mic.disabled=true;mic.title='Voice input is not supported by this browser. Try Chrome on Android.';}
+document.getElementById('export').onclick=()=>{const blob=new Blob([JSON.stringify(saved,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='vivek-ai-chat-backup.json';a.click();URL.revokeObjectURL(a.href);};
+document.getElementById('clear').onclick=()=>{if(confirm('Clear this device’s saved VIVEK AI chat?')){saved.length=0;localStorage.removeItem('vivek_ai_chat');chat.innerHTML='<div class="msg bot">Chat cleared. What shall we work on next?</div>';if('speechSynthesis'in window)speechSynthesis.cancel();}};
+if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body></html>
